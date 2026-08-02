@@ -1,4 +1,4 @@
-# Estimating the effect of email acquisition on customer revenue using Propensity Score Matching (PSM)
+# Estimating the causal impact of email acquisition on customer revenue with Propensity Score Matching (PSM)
 
 This project examines the causal effect of email acquisition on customer revenue using a quasi-experimental approach with PSM on observational e-commerce data.
 
@@ -12,13 +12,13 @@ Users in this dataset were not randomly assigned to acquisition channels. Theref
 
 ## 3. Method
 
-1. **Feature engineering**: Aggregated raw order, session and demographic data into a user level feature table
-2. **Propensity score model**: Logistic regression was applied to  estimate each user's probability of email acquisition, using pre-treatment demographic covariates (age, gender, country, state) to avoid post-treatment bias
-3. **Common support check**: Before matching, propensity scores between treatment and control groups were verified
-4. **1:1 nearest-neighbour matching**: Matched email to non-email users on a 1:1 principle.
-5. **Covariate balance check**: Validated this matching by observed differences between groups
-6. **ATT estimation**:  Average Treatment Effect (ATE) on the treated, based on matched-pair revenue differences
-7. **Paired t-test** : Significance testing appropriate for 1:1 matched pairs
+- Feature engineering
+- Propensity score estimation
+- Common support assessment
+- 1:1 nearest-neighbour matching
+- Covariate balance assessment
+- ATT estimation
+- Paired t-test
 
 ## 4. Key finding
 
